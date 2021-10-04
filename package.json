@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "genBuild": "vue-cli-service build",
     "backend": "json-server --watch db.json --port 5000",
-    "build": "concurrently --kill-others \"npm run build\" \"npm run backend\""
+    "build": "concurrently --kill-others \"npm run genBuild\" \"npm run backend\""
   },
   "dependencies": {
     "core-js": "^3.6.5",
