@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start" : "node server.js",
     "serve": "vue-cli-service serve",
-    "genBuild": "vue-cli-service build",
+    "build": "vue-cli-service build",
     "backend": "json-server --watch db.json --port 5000",
-    "build": "concurrently --kill-others \"npm run genBuild\" \"npm run backend\""
+    "dev": "concurrently --kill-others \"npm run build\" \"npm run backend\""
   },
   "dependencies": {
     "core-js": "^3.6.5",
