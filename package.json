@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "genBuild": "vue-cli-service build",
     "backend": "json-server --watch db.json --port 5000",
-    "dev": "concurrently --kill-others \"npm run build\" \"npm run backend\""
+    "build": "concurrently --kill-others \"npm run build\" \"npm run backend\""
   },
   "dependencies": {
     "core-js": "^3.6.5",
