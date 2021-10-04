@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{title}}</h1>
-        <Button @click="handleClick()" text="Add task"/>
+        <Button  @click="$emit('toggle-add-task')" :text="showAddTask ? 'Close' : 'Add task'" :color="showAddTask ? 'red' : ''"/>
     </header>
 </template>
 
@@ -12,14 +12,10 @@ import Button from './Button'
         name: 'Header',
         props:  {
             title: { type:String, default: 'Welcome mf'},
+            showAddTask : Boolean
         },        
         components: {
             Button
-        },
-        methods:{
-            handleClick(){
-                console.log('clikc');
-            }
         }
     }
 </script>

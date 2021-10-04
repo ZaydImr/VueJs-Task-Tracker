@@ -1,27 +1,37 @@
 <template>
   <div class="container">
-    <Header title="Task tracker" />
+    <Header  @toggle-add-task="this.showAddTask = !this.showAddTask" title="Task tracker" :showAddTask="showAddTask" />
+    <div v-show="showAddTask">
+      <AddTask @add-task="addTask"/>
+    </div>
     <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks" />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import Tasks from './components/Tasks.vue'
+import Tasks from './components/Tasks.vue';
+import AddTask from './components/AddTask.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Tasks
+    Tasks,
+    AddTask
   },
   data(){
     return{
-      tasks:[]
+      tasks:[],
+      showAddTask : false
     }
   },
   methods:{
-    deleteTask(id){
+      addTask(task){
+        this.showAddTask = false;
+          this.tasks = [...this.tasks,task];
+      },
+      deleteTask(id){
       if(confirm('Are you sure ?')) this.tasks = this.tasks.filter(task=>task.id !== id);
       },
       toggleReminder(id){
@@ -55,10 +65,8 @@ export default {
 </script>
 
 <style>
+*{font-family: 'poppins';}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;

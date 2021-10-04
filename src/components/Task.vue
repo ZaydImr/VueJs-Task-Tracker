@@ -26,6 +26,7 @@ export default {
     margin: 1rem auto;
     padding: .5rem 1rem;
 }
+.task *{margin: .25rem 0;}
 .task.reminder{
     border-left: 5px solid green;
 }

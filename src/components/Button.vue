@@ -8,6 +8,6 @@ export default {
     props:{
         text:String,
         color: String
-    },
+    }
 }
 </script>
