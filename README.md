@@ -1,19 +1,8 @@
 # vue-crash-2021
 
-## Project setup
-```
-npm install
-```
+### Project url   	 :   https://vuejs-3.netlify.app/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
 ```
-npm run build
+This is my first project using vueJs and it's just between react and angular in logic ..
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
