@@ -40,4 +40,13 @@ a:hover{
   font-weight: 500;
   font-size: large;
 }
+.btn,input[type=submit]{
+  transition: .3s;
+  cursor: pointer;
+}
+.btn:hover,input[type=submit]:hover{
+  border: 2px solid #2c3e50;
+  font-size: 18px;
+  font-weight: 500;
+}
 </style>
